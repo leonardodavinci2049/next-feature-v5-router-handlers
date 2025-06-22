@@ -50,7 +50,7 @@ export async function DELETE(request: Request) {
     return new Response(null, { status: 204 });
   }
   
-  return new Response('Comment not found', { status: 404 });
+  return new Response('Comment not EXISTS', { status: 404 });
 }
 
 export async function PUT(request: Request) {

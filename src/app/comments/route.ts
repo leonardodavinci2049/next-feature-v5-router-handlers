@@ -9,6 +9,10 @@ export async function GET() {
   });
 }
 
+
+
+
+
 export async function POST(request: Request) {
   const newComment = await request.json();
   comments.push(newComment);

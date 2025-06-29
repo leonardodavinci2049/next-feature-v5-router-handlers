@@ -1,0 +1,117 @@
+[
+  {
+    "id": 1,
+    "nome": "João Silva",
+    "email": "joao.silva@email.com",
+    "telefone": "(11) 99999-1234",
+    "cpf": "123.456.789-01",
+    "dataNascimento": "1985-03-15",
+    "endereco": {
+      "rua": "Rua das Flores, 123",
+      "bairro": "Centro",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "cep": "01234-567"
+    },
+    "preferencias": {
+      "categoriasFavoritas": ["eletrônicos", "casa"],
+      "receberEmails": true,
+      "receberSms": false
+    },
+    "dataCadastro": "2023-01-15T10:30:00Z",
+    "ultimoAcesso": "2025-01-02T14:22:00Z",
+    "status": "ativo"
+  },
+  {
+    "id": 2,
+    "nome": "Maria Oliveira",
+    "email": "maria.oliveira@email.com",
+    "telefone": "(21) 98888-5678",
+    "cpf": "987.654.321-02",
+    "dataNascimento": "1990-07-22",
+    "endereco": {
+      "rua": "Avenida Brasil, 456",
+      "bairro": "Copacabana",
+      "cidade": "Rio de Janeiro",
+      "estado": "RJ",
+      "cep": "22070-011"
+    },
+    "preferencias": {
+      "categoriasFavoritas": ["moda", "beleza", "livros"],
+      "receberEmails": true,
+      "receberSms": true
+    },
+    "dataCadastro": "2023-03-10T08:15:00Z",
+    "ultimoAcesso": "2025-01-02T16:45:00Z",
+    "status": "ativo"
+  },
+  {
+    "id": 3,
+    "nome": "Pedro Santos",
+    "email": "pedro.santos@email.com",
+    "telefone": "(31) 97777-9012",
+    "cpf": "456.789.123-03",
+    "dataNascimento": "1988-11-08",
+    "endereco": {
+      "rua": "Rua da Liberdade, 789",
+      "bairro": "Savassi",
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "cep": "30112-000"
+    },
+    "preferencias": {
+      "categoriasFavoritas": ["esportes", "eletrônicos"],
+      "receberEmails": false,
+      "receberSms": true
+    },
+    "dataCadastro": "2023-05-20T12:00:00Z",
+    "ultimoAcesso": "2025-01-01T20:30:00Z",
+    "status": "ativo"
+  },
+  {
+    "id": 4,
+    "nome": "Ana Costa",
+    "email": "ana.costa@email.com",
+    "telefone": "(85) 96666-3456",
+    "cpf": "789.123.456-04",
+    "dataNascimento": "1992-02-14",
+    "endereco": {
+      "rua": "Rua do Sol, 321",
+      "bairro": "Meireles",
+      "cidade": "Fortaleza",
+      "estado": "CE",
+      "cep": "60160-230"
+    },
+    "preferencias": {
+      "categoriasFavoritas": ["casa", "decoração", "jardinagem"],
+      "receberEmails": true,
+      "receberSms": false
+    },
+    "dataCadastro": "2023-08-12T15:45:00Z",
+    "ultimoAcesso": "2025-01-02T11:20:00Z",
+    "status": "ativo"
+  },
+  {
+    "id": 5,
+    "nome": "Carlos Ferreira",
+    "email": "carlos.ferreira@email.com",
+    "telefone": "(41) 95555-7890",
+    "cpf": "321.654.987-05",
+    "dataNascimento": "1987-09-30",
+    "endereco": {
+      "rua": "Rua XV de Novembro, 654",
+      "bairro": "Centro",
+      "cidade": "Curitiba",
+      "estado": "PR",
+      "cep": "80020-310"
+    },
+    "preferencias": {
+      "categoriasFavoritas": ["automotivo", "ferramentas", "eletrônicos"],
+      "receberEmails": true,
+      "receberSms": true
+    },
+    "dataCadastro": "2023-09-05T09:30:00Z",
+    "ultimoAcesso": "2024-12-30T18:15:00Z",
+    "status": "inativo"
+  }
+]

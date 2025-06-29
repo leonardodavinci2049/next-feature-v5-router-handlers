@@ -1,0 +1,20 @@
+[
+  {
+    "id": 2,
+    "text": "Este é o segundo comentário.",
+    "author": "Bob",
+    "timestamp": "2023-10-01T12:05:00Z"
+  },
+  {
+    "id": 3,
+    "text": "Este é o terceiro comentário.",
+    "author": "Charlie",
+    "timestamp": "2023-10-01T12:10:00Z"
+  },
+  {
+    "id": 4,
+    "text": "This is the first comment POST.",
+    "author": "Alice POST",
+    "timestamp": "2025-06-29T11:58:10.786Z"
+  }
+]

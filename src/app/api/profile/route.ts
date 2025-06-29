@@ -30,7 +30,7 @@ interface ProfileData {
 export async function GET(request: NextRequest) {
   try {
     const requestHeaders = new Headers(request.headers);
-    const authHeader = requestHeaders.get("Authorization");
+
     const themeHeader = requestHeaders.get("theme");
 
     const headersList = await headers();
@@ -48,12 +48,28 @@ export async function GET(request: NextRequest) {
     const fileContents = await fs.readFile(filePath, "utf8");
     const profilesData: ProfileData[] = JSON.parse(fileContents);
 
-    // Filtrar dados sensíveis baseado no tema (exemplo de lógica de negócio)
+    // Filtrar dados sensíveis baseado no nível de acesso (LGPD compliance)
     const sanitizedProfiles = profilesData.map((profile) => {
-      const { cpf, ...profileWithoutCpf } = profile;
-      return themeHeader === "dark"
-        ? profile // Tema dark mostra dados completos (admin mode)
-        : profileWithoutCpf; // Tema normal remove dados sensíveis
+      const isAdminMode = themeHeader === "dark";
+      
+      if (isAdminMode) {
+        return profile; // Modo admin - dados completos
+      }
+      
+      // Remover dados sensíveis para usuários comuns (proteção LGPD)
+      return {
+        id: profile.id,
+        nome: profile.nome,
+        email: profile.email,
+        telefone: profile.telefone,
+        // cpf removido intencionalmente para proteção de dados
+        dataNascimento: profile.dataNascimento,
+        endereco: profile.endereco,
+        preferencias: profile.preferencias,
+        dataCadastro: profile.dataCadastro,
+        ultimoAcesso: profile.ultimoAcesso,
+        status: profile.status,
+      };
     });
 
     return NextResponse.json(

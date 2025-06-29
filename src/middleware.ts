@@ -1,19 +1,22 @@
-
 import { NextRequest, NextResponse } from "next/server";
 
-
 /**
- * Middleware de redirecionamento para perfil do usuário.
+ * Middleware de redirecionamento da rota profile para a home.
  * @param request NextRequest
  * @returns NextResponse
  */
 export function middleware(request: NextRequest) {
-    return NextResponse.redirect(new URL("/profile", request.url));
+  // Redireciona /profile para a home (/)
+  if (request.nextUrl.pathname === "/profile") {
+    return NextResponse.redirect(new URL("/", request.url));
+  }
+
+  return NextResponse.next();
 }
 
 export const config = {
   matcher: [
-    // Skip Next.js internals and all static files, unless found in search params
+    // Intercepta apenas a rota /profile
     "/profile",
   ],
 };

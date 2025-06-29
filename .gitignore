@@ -43,5 +43,3 @@ next-env.d.ts
 .well-known
 new-project.md
 .github
-rest-client.http
-rest-client.http

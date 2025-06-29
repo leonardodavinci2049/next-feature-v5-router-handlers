@@ -1,0 +1,44 @@
+GET http://localhost:3000/api/profile
+Accept: application/json
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+theme: dark
+
+###
+GET http://localhost:3000/api/comments
+
+###
+GET http://localhost:3000/api/comments/1
+
+
+###
+GET http://localhost:3000/api/comments?query=first
+
+
+###
+GET http://localhost:3000/api/comments?query=post
+
+
+###
+POST  http://localhost:3000/api/comments
+Content-Type: application/json
+
+{
+
+    "text": "This is the first comment POST.",
+    "author": "Alice POST",
+    "timestamp": "2023-10-01T12:00:00Z"
+}
+
+###
+PATCH  http://localhost:3000/api/comments/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "text": "This is the first comment PATCH.",
+    "author": "Alice PATCH"
+}
+
+###
+DELETE  http://localhost:3000/api/comments/1
